@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schemalist>
+  <enum id='org.gnome.shell.extensions.battery_status.display-mode-enum'>
+    <value value='0' nick='time'/>
+    <value value='1' nick='percentage'/>
+    <value value='2' nick='icon_only'/>
+  </enum>
+  <enum id='org.gnome.shell.extensions.battery_status.time-mode-enum'>
+    <value value='0' nick='canonical'/>
+    <value value='1' nick='flat_minutes'/>
+  </enum>
+  <enum id='org.gnome.shell.extensions.battery_status.when-full-enum'>
+    <value value='0' nick='nothing'/>
+    <value value='1' nick='icon'/>
+    <value value='2' nick='all'/>
+  </enum>
+  <enum id='org.gnome.shell.extensions.battery_status.time-style-enum'>
+    <value value='0' nick='ticker'/>
+    <value value='1' nick='names'/>
+    <value value='2' nick='geo'/>
+  </enum>
+  <schema path="/org/gnome/shell/extensions/battery_status/" id="org.gnome.shell.extensions.battery_status">
+    <key name="when-charging" enum="org.gnome.shell.extensions.battery_status.when-full-enum">
+      <default>'all'</default>
+      <summary>What to show when battery is charging</summary>
+      <description/>
+    </key>
+    <key name="show-label-when-full" type="b">
+      <default>true</default>
+      <summary>Show label when full</summary>
+      <description>Display battery label even when not charging or discharging.</description>
+    </key>
+    <key name="display-mode" enum="org.gnome.shell.extensions.battery_status.display-mode-enum">
+      <default>'percentage'</default>
+      <summary>Type of information to display</summary>
+      <description/>
+    </key>
+    <key name="time-mode" enum="org.gnome.shell.extensions.battery_status.time-mode-enum">
+      <default>'canonical'</default>
+      <summary>Format of time display</summary>
+      <description/>
+    </key>
+    <key name="when-full" enum="org.gnome.shell.extensions.battery_status.when-full-enum">
+      <default>'all'</default>
+      <summary>What to show when battery is full</summary>
+      <description/>
+    </key>
+    <key name="time-style" enum="org.gnome.shell.extensions.battery_status.time-style-enum">
+      <default>'ticker'</default>
+      <summary>Format of time display</summary>
+      <description/>
+    </key>
+  </schema>
+</schemalist>
